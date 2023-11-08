@@ -1,0 +1,132 @@
+.register {
+  background-image: url(../public/bgAuth.jpg);
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  background-size: contain;
+
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+.rgtContainer {
+  width: 600px;
+  height: fit-content;
+  z-index: 1000;
+  position: relative;
+  border-radius: 6px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(20, 50, 93, 0.9),
+    rgba(8, 22, 48, 0.9)
+  );
+}
+.rgtContain {
+  padding: 20px 32px 30px;
+  color: white;
+  box-sizing: border-box;
+}
+
+  
+
+.renderSeat{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+  /* background-color: #2196F3; */
+  padding: 10px;
+}
+.inputContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+ 
+}
+.inputContainer input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkMarkVipBG{
+  background-color: orange ;
+}
+.checkMarkBG {
+  background-color: rgb(233, 233,233);
+}
+.checkMark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 35px;
+ 
+  border-radius: 5px;
+  text-align: center;
+  
+  
+}
+.inputContainer:hover input ~ .checkMark {
+  background-color: #ccc;
+}
+.inputContainer input:checked ~ .checkMark {
+  background-color: green;
+  border-radius: 5px;
+}
+.checkMark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.inputContainerTemp {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+ 
+}
+.inputContainerTemp input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkMarkDaDat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  background-color: rgb(118, 118,118);
+  border-radius: 5px;
+  text-align: center;
+  
+  
+}
+.checkMarkVip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  background-color: orange;
+  border-radius: 5px;
+  text-align: center;
+  
+  
+}
