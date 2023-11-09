@@ -104,7 +104,8 @@ const LoginPage = () => {
               type="primary"
               htmlType="submit"
              
-              className="bg-green-500 hover:bg-white hover:text-orange-500"
+              className=" hover:bg-white hover:text-orange-500"
+              style={{background:"#28a745"}}
             >
              Đăng nhập
             </Button>

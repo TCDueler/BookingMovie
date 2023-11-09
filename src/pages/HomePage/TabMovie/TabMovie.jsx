@@ -10,8 +10,9 @@ const onChange = (key) => {
 };
 
 export default function TabMovie() {
+  let USER = JSON.parse(localStorage.getItem("USER")) || false;
   let navigate = useNavigate();
-  let dispatch=useDispatch();
+  let dispatch = useDispatch();
   
   const [heThongRap, setHeThongRap] = useState([]);
   useEffect(() => {
@@ -79,7 +80,11 @@ export default function TabMovie() {
                   payload:lichChieu.maLichChieu,
                 })
                 localStorage.setItem("SCHEDULE",JSON.stringify(lichChieu.maLichChieu))
-                navigate("/booking")
+                if (USER==false) {
+                  navigate(`/login`);
+                } else {
+                  navigate(`/booking/${lichChieu.maLichChieu}`);
+                }
                 console.log("lichchieu",lichChieu.maLichChieu)}}>
                   {moment(lichChieu.ngayChieuGioChieu).format("DD/MM/YYYY - HH:mm")}
                   </span>

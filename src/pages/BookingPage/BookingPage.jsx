@@ -9,6 +9,7 @@ export default function BookingPage() {
   //let navigate = useNavigate();
   // const maLichChieu = useSelector((state) => state.userReducer.maLichChieu);
   const maLichChieu = SCHEDULE;
+  //let { id } = useParams();
   const [List, setList] = useState();
   const [chonGhe, setChonGhe] = useState([]);
   const [tongTien, setTongTien] = useState(0);
