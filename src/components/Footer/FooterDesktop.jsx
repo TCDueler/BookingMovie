@@ -111,7 +111,7 @@ export default function FooterDesktop() {
                 }}
               >
                 <img
-                  src="../../../public/partner/bhd.png"
+                  src="/partner/bhd.png"
                   alt
                   className="jss42 partnerIcon"
                 />
@@ -127,7 +127,7 @@ export default function FooterDesktop() {
                 href="https://www.cgv.vn/"
               >
                 <img
-                  src="../../../public/partner/bt.jpg"
+                  src="/partner/bt.jpg"
                   alt
                   className="jss42 partnerIcon"
                 />
@@ -143,7 +143,7 @@ export default function FooterDesktop() {
                 href="https://www.cgv.vn/"
               >
                 <img
-                  src="../../../public/partner/cgv.png"
+                  src="/partner/cgv.png"
                   alt
                   className="jss42 partnerIcon"
                 />
@@ -159,7 +159,7 @@ export default function FooterDesktop() {
                 href="https://www.cgv.vn/"
               >
                 <img
-                  src="../../../public/partner/cinestar.png"
+                  src="/partner/cinestar.png"
                   alt
                   className="jss42 partnerIcon"
                 />
@@ -185,7 +185,7 @@ export default function FooterDesktop() {
                 }}
               >
                 <img
-                  src="../../../public/partner/dongdacinema.png"
+                  src="/partner/dongdacinema.png"
                   alt
                   className="jss42 partnerIcon"
                 />
@@ -201,7 +201,7 @@ export default function FooterDesktop() {
                 href="https://www.cgv.vn/"
               >
                 <img
-                  src="../../../public/partner/galaxycine.png"
+                  src="/partner/galaxycine.png"
                   alt
                   className="jss42 partnerIcon"
                 />
@@ -217,7 +217,7 @@ export default function FooterDesktop() {
                 href="https://www.cgv.vn/"
               >
                 <img
-                  src="../../../public/partner/lotte.png"
+                  src="/partner/lotte.png"
                   alt
                   className="jss42 partnerIcon"
                 />
@@ -233,7 +233,7 @@ export default function FooterDesktop() {
                 href="https://www.cgv.vn/"
               >
                 <img
-                  src="../../../public/partner/megags.png"
+                  src="/partner/megags.png"
                   alt
                   className="jss42 partnerIcon"
                 />
@@ -284,7 +284,7 @@ export default function FooterDesktop() {
                 <img
                   style={{ width: "30px", height: "30px", borderRadius: "50%" }}
                   className="jss42"
-                  src="../../../public/partner/apple-logo.png"
+                  src="/partner/apple-logo.png"
                   alt
                 />
               </a>
@@ -301,7 +301,7 @@ export default function FooterDesktop() {
                 <img
                   style={{ width: "30px", height: "30px", borderRadius: "50%" }}
                   className="jss42"
-                  src="../../../public/partner/android-logo.png"
+                  src="/partner/android-logo.png"
                   alt
                 />
               </a>
@@ -342,7 +342,7 @@ export default function FooterDesktop() {
                 <img
                   style={{ width: "30px", height: "30px", borderRadius: "50%" }}
                   className="jss42"
-                  src="../../../public/partner/facebook-logo.png"
+                  src="/partner/facebook-logo.png"
                   alt
                 />
               </a>
@@ -359,7 +359,7 @@ export default function FooterDesktop() {
                 <img
                   style={{ width: "30px", height: "30px", borderRadius: "50%" }}
                   className="jss42"
-                  src="../../../public/partner/zalo-logo.png"
+                  src="/partner/zalo-logo.png"
                   alt
                 />
               </a>
@@ -371,7 +371,7 @@ export default function FooterDesktop() {
         <div className="row" style={{marginRight:0,marginLeft:0,display:"flex",flexWrap:"wrap",boxSizing:"border-box"}}>
           <div className="col-12 " style={{textAlign:"center",padding:"0.25rem",flex:"0 0 8.333333%",maxWidth:"8.333333%"}}>
             <img
-              src="../../../public/partner/zion-logo.jpg"
+              src="/partner/zion-logo.jpg"
               alt="company"
               className="jss50"
               style={{width:"100%",borderRadius:"8px"}}
@@ -397,7 +397,7 @@ export default function FooterDesktop() {
             className="col-12 col-md-2 p-1 text-center"
             style={{ position: "static",textAlign:"center",padding:"0.25rem",flex:"0 0 16.666667%",maxWidth:"16.666667%" }}
           >
-            <img src="../../../public/partner/certificate.png" alt="gvm" className="jss51" />
+            <img src="/partner/certificate.png" alt="gvm" className="jss51" />
           </div>
         </div>
       </div>

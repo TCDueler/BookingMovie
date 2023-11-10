@@ -22,7 +22,7 @@ if(info){
     <span style={{color:"rgb(155, 155, 155)"}} className="flex">
       <img 
     style={{width:"3rem",height:"100%"}}
-    src="../../../public/Capture-removebg-preview.png" alt=""></img>
+    src="/Capture-removebg-preview.png" alt=""></img>
     <p style={{paddingTop:12,paddingRight:10}}>{info.hoTen}   </p>
     </span> {" "}
     <button className="btn-theme" onClick={handleLogout}
