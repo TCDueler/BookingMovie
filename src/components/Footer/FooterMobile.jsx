@@ -159,7 +159,7 @@ export default function FooterMobile() {
               src="../../../public/partner/zion-logo.jpg"
               alt="company"
               className="jss50"
-              style={{textAlign:"center", width:"100%",borderRadius:"8px",height:"30px",width:"80px"}}
+              style={{textAlign:"center",borderRadius:"8px",height:"30px",width:"80px"}}
             />
           </div>
         
