@@ -1,9 +1,9 @@
 //import { Col, Row } from "antd";
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+
 import { movieService } from "../../service/service";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+
 export default function BookingPageTablet() {
   let SCHEDULE = JSON.parse(localStorage.getItem("SCHEDULE"));
   //let navigate = useNavigate();
