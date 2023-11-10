@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { adminService, userService } from "../../service/service";
 import { Button, Drawer, Modal, Table, Tag, Form, Input } from "antd";
 import toast from "react-hot-toast";
-import { Toast } from "bootstrap";
+
 //import { Form } from "react-router-dom";
 
 export default function UserPage() {

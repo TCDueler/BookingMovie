@@ -7,6 +7,7 @@ export default defineConfig({
   build: { chunkSizeWarningLimit: 1600,rollupOptions: {
     external: [
       "react-hot-toast",
+     
     ]
   } }
 })
