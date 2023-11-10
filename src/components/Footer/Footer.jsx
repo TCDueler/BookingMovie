@@ -2,6 +2,7 @@ import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 import FooterDesktop from './FooterDesktop'
 import FooterMobile from './FooterMobile'
+import FooterTablet from './FooterTablet'
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 992 })
@@ -29,6 +30,9 @@ export default function Footer() {
         <Mobile>
             <FooterMobile/>
         </Mobile>
+        <Tablet>
+          <FooterTablet/>
+        </Tablet>
     </div>
   )
 }

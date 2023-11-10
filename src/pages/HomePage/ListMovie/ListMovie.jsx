@@ -1,39 +1,37 @@
-import React, { useEffect, useState } from 'react'
-import { movieService } from '../../../service/service'
-import { Card } from 'antd';
-import Meta from 'antd/es/card/Meta';
+import React from 'react'
+import { useMediaQuery } from 'react-responsive'
+import ListMovieDesktop from './ListMovieDesktop'
+import ListMovieTablet from "./ListMovieTablet"
+import ListMovieMobile from "./ListMovieMobile"
+const Desktop = ({ children }) => {
+  const isDesktop = useMediaQuery({ minWidth: 992 })
+  return isDesktop ? children : null
+}
+const Tablet = ({ children }) => {
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
+  return isTablet ? children : null
+}
+const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({ maxWidth: 767 })
+  return isMobile ? children : null
+}
+const Default = ({ children }) => {
+  const isNotMobile = useMediaQuery({ minWidth: 768 })
+  return isNotMobile ? children : null
+}
 
-import {NavLink, useParams } from "react-router-dom";
 export default function ListMovie() {
-  const [list,setList] = useState();
-
-  console.log("list",list)
-  
-  useEffect(()=>{
-    movieService
-    .getList()
-    .then((res)=>{
-      //console.log(res)
-     setList(res.data.content);
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
-  },[]);
-  let renderList = ()=>{
-   return list?.map(({hinhAnh,tenPhim,maPhim})=>{
-      return (<Card
-      hoverable
-      style={{
-        width: 240,
-      }}
-      cover={<img alt="example" src={hinhAnh} className='object-cover h-80'/>}
-    >
-      <Meta title={tenPhim}  />
-      <NavLink to={`/detail/${maPhim}`} className='h-10 w-full rounded bg-red-600 text-white block leading-10 text-center'>Xem ngay</NavLink>
-    </Card>)
-    })
-  }
-  return <div className='container grid grid-cols-4 gap-10 pt-20'>{renderList()}</div>;
-  
+  return (
+    <div>
+        <Desktop>
+            <ListMovieDesktop/>
+        </Desktop>
+        <Mobile>
+            <ListMovieMobile/>
+        </Mobile>
+        <Tablet>
+          <ListMovieTablet/>
+        </Tablet>
+    </div>
+  )
 }

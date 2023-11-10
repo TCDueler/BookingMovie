@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react'
 
-export default function FooterDesktop() {
+export default function FooterTablet() {
   return (
-    <div className="footerDesktop">
+    <div className="footerTablet" style={{width:"991px", height:"350px"}}>
       <div
         style={{
           margin: "auto",
-          maxWidth: "940px",
+          maxWidth: "991px",
           paddingBottom: "20px",
           display: "flex",
           flexWrap: "wrap",
@@ -14,8 +14,8 @@ export default function FooterDesktop() {
       >
         <div
           style={{
-            flex: "0 0 33.333333%",
-            maxWidth: "33.333333%",
+            flex: "0 0 15%",
+            maxWidth: "15%",
             display: "block!important",
             position: "relative",
             width: "100%",
@@ -35,53 +35,13 @@ export default function FooterDesktop() {
                 Brand Guidelines
               </a>
             </div>
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                marginRight: 0,
-                marginLeft: 0,
-              }}
-            >
-              <a
-                style={{
-                  color: "#949494",
-                  display: "block",
-                  flex: "0 0 100%",
-                  maxWidth: "100%",
-                  position: "relative",
-                  width: "100%",
-                  paddingRight: "15px",
-                  paddingLeft: "15px",
-                  backgroundColor: "transparent",
-                }}
-                href=""
-              >
-                Thoả thuận sử dụng
-              </a>
-              <a
-                style={{
-                  color: "#949494",
-                  display: "block",
-                  flex: "0 0 100%",
-                  maxWidth: "100%",
-                  position: "relative",
-                  width: "100%",
-                  paddingRight: "15px",
-                  paddingLeft: "15px",
-                  backgroundColor: "transparent",
-                }}
-                href=""
-              >
-                Chính sách bảo mật
-              </a>
-            </div>
+          
           </div>
         </div>
         <div
           style={{
-            flex: "0 0 33.333333%",
-            maxWidth: "33.333333%",
+            flex: "0 0 30%",
+            maxWidth: "30%",
             display: "block!important",
             position: "relative",
             width: "100%",
@@ -377,7 +337,7 @@ export default function FooterDesktop() {
               style={{width:"100%",borderRadius:"8px"}}
             />
           </div>
-          <div className="col-12 "style={{textAlign:"left",padding:"0.25rem",flex:"0 0 75%",maxWidth:"75%",color:"white",fontSize:"12px"}}>
+          <div className="col-12 "style={{textAlign:"left",padding:"0.25rem",flex:"0 0 50%",maxWidth:"50%",color:"white",fontSize:"12px"}}>
             <span>TIX - SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</span>
             <span>
               Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ
@@ -402,5 +362,5 @@ export default function FooterDesktop() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -27,13 +27,23 @@
   box-sizing: border-box;
 }
 
-  
-
-.renderSeat{
+.renderSeat {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
   /* background-color: #2196F3; */
   padding: 10px;
+}
+.renderSeatTablet {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto ;
+  /* background-color: #2196F3; */
+  padding: 10px;
+}
+.renderSeatMobile {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto  ;
+  /* background-color: #2196F3; */
+  padding: 5px;
 }
 .inputContainer {
   display: block;
@@ -46,7 +56,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
- 
 }
 .inputContainer input {
   position: relative;
@@ -55,11 +64,11 @@
   height: 0;
   width: 0;
 }
-.checkMarkVipBG{
-  background-color: orange ;
+.checkMarkVipBG {
+  background-color: orange;
 }
 .checkMarkBG {
-  background-color: rgb(233, 233,233);
+  background-color: rgb(233, 233, 233);
 }
 .checkMark {
   position: absolute;
@@ -67,11 +76,9 @@
   left: 0;
   height: 35px;
   width: 35px;
- 
+
   border-radius: 5px;
   text-align: center;
-  
-  
 }
 .inputContainer:hover input ~ .checkMark {
   background-color: #ccc;
@@ -96,7 +103,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
- 
 }
 .inputContainerTemp input {
   position: relative;
@@ -112,11 +118,9 @@
   left: 0;
   height: 35px;
   width: 35px;
-  background-color: rgb(118, 118,118);
+  background-color: rgb(118, 118, 118);
   border-radius: 5px;
   text-align: center;
-  
-  
 }
 .checkMarkVip {
   position: absolute;
@@ -127,6 +131,124 @@
   background-color: orange;
   border-radius: 5px;
   text-align: center;
+}
+.detailBg {
+  background-color:#090d1c;
+}
+
+.detailBGImg {
+  background-image: url(../public/bgAuth.jpg);
+  /* filter: blur(15px); */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.detailHeader {
+  width: 100%;
+  height: 41vw;
+  position: relative;
+}
+.detailContent {
+  top: 50%;
+  left: 50%;
+  color: #e9e9e9;
+  width: 100%;
+  height: 320px;
+  display: flex;
+  position: absolute;
+  max-width: 870px;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+}
+.detailContentLeft {
+  width: 25%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.detailContentLeftMobile {
+  width: 25%;
   
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.detailContentMid {
+  width: 59%;
+  padding: 0px 15px;
+}
+.detailContentMidMobile {
+  width: 59%;
+ 
+}
+.detailContentRight {
+  width: 16%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tagMovie {
+  color: #fff;
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 16px;
+    min-width: 33px;
+    text-align: center;
+    margin-right: 6px;
+    border-radius: 4px;
+    vertical-align: 13%;
+    background-color: #fb4226;
+}
+.btnMuaVe {
+  color: #fff;
+    border: none;
+    padding: 11px 25px;
+    font-size: 16px;
+    background: 0 0;
+    margin-top: 25px;
+    transition: all .2s;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background-color: #fb4226;
+}
+.footerDesktop{
+  background-color:#222;
+  color:white;
+  padding:20px 0;
+  font-size: 12px;
+
+}
+.footerMobile{
+  background-color:#222;
+  color:white;
+  padding:5px 0;
+  font-size: 8px;
+
+}
+.footerTablet{
+  background-color:#222;
+  color:white;
+  padding:5px 0;
+  font-size: 8px;
+}
+.partnerIcon {
+  border-radius: 50%;
+  background-color:white;
+  width: 30px;
+  height: 30px;
 }
