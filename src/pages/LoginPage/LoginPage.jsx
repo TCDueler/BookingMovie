@@ -32,7 +32,8 @@ const LoginPage = () => {
   };
 //redux thunk
   const onFinishThunk = value => {
-   let onSuccess = ()=> navigate("/")
+   let onSuccess = ()=> window.location.href = "/";
+    // navigate("/")
    dispatch(loginAction(value,onSuccess))
     
   }

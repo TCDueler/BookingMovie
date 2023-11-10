@@ -162,7 +162,7 @@ export default function BookingPageMobile() {
         console.log(res);
         toast.success("đặt thành công");
         //navigate("/booking")
-        window.location.href = "/booking";
+        window.location.href = `/booking/${SCHEDULE}`;
       })
       .catch((err) => {
         console.log(err);

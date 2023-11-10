@@ -96,6 +96,7 @@ export default function DetailPageDesktop() {
                               navigate(`/login`);
                             } else {
                               navigate(`/booking/${lich.maLichChieu}`);
+                             
                             }
                             console.log("lichchieu", id);
                           }}
