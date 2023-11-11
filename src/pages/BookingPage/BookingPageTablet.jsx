@@ -3,13 +3,15 @@ import React, { useEffect, useState } from "react";
 
 import { movieService } from "../../service/service";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 export default function BookingPageTablet() {
   let SCHEDULE = JSON.parse(localStorage.getItem("SCHEDULE"));
-  //let navigate = useNavigate();
+  let navigate = useNavigate();
   // const maLichChieu = useSelector((state) => state.userReducer.maLichChieu);
   const maLichChieu = SCHEDULE;
   //let { id } = useParams();
+  const [number,setNumber] =useState(0);
   const [List, setList] = useState();
   const [chonGhe, setChonGhe] = useState([]);
   const [tongTien, setTongTien] = useState(0);
@@ -42,6 +44,18 @@ export default function BookingPageTablet() {
         console.log(err);
       });
   }, []);
+  useEffect(() => {
+    movieService
+      .getSeatByShowTimeId(maLichChieu)
+      .then((res) => {
+        //console.log("content ma lich chieu", res);
+        setList(res.data.content);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [number]);
+ 
   useEffect(() => {
     let newDataDatVe = { ...dataDatVe, danhSachVe: dsVe };
     setDataDatVe(newDataDatVe);
@@ -161,8 +175,9 @@ export default function BookingPageTablet() {
       .then((res) => {
         console.log(res);
         toast.success("đặt thành công");
-        //navigate("/booking")
-        window.location.href = `/booking/${SCHEDULE}`;
+        setNumber(number=>number+1)
+        navigate(`/booking/${SCHEDULE}`)
+       // window.location.href = `/booking/${SCHEDULE}`;
       })
       .catch((err) => {
         console.log("err",err);
