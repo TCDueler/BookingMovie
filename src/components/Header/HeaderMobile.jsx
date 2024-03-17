@@ -5,66 +5,66 @@ import { useNavigate } from "react-router-dom";
 export default function HeaderMobile() {
   let navigate = useNavigate();
   //let info = useSelector((state)=> {return state.userReducer.info;})
-   let {info} = useSelector(state=>state.userReducer);
-   console.log("🚀 ~ file: Header.jsx:9 ~ Header ~ info:", info)
-   let handleLogout = ()=>{
+  let { info } = useSelector(state => state.userReducer);
+  console.log("🚀 ~ file: Header.jsx:9 ~ Header ~ info:", info)
+  let handleLogout = () => {
     // vừa chuyển trang vừa reload 
-    window.location.href="/"
+    window.location.href = "/"
     localStorage.clear();
     // xoá toàn bộ local storage
 
-   }
-   let renderUserNav = ()=>{
-if(info){
-  return (
-    <>
-    <div className="flex justify-start">
-    <span style={{color:"rgb(155, 155, 155)"}} className="flex">
-      <img 
-    style={{width:"3rem",height:"100%"}}
-    src="/Capture-removebg-preview.png" alt=""></img>
-    <p style={{paddingTop:12,paddingRight:10}}>{info.hoTen}   </p>
-    </span> {" "}
-    <button className="btn-theme" onClick={handleLogout}
-    style={{color:"rgb(155, 155, 155)",borderColor:"rgb(155, 155, 155)"}}
-    >Logout</button>
-    </div>
-   
-   
-    </>
-  )
-}
-return (
-  <>
-  <button
-            onClick={() => {
-              navigate("/login");
-            }}
-            className="btn-theme"
-            style={{color:"rgb(155, 155, 155)",borderColor:"rgb(155, 155, 155)"}}
-          >
-            Login
-          </button>
-          <button
-            onClick={() => {
-              navigate("/register");
-            }}
-            className="btn-theme"
-            style={{color:"rgb(155, 155, 155)",borderColor:"rgb(155, 155, 155)"}}
-          >
+  }
+  let renderUserNav = () => {
+    if (info) {
+      return (
+        <>
+          <div className="flex justify-start">
+            <span style={{ color: "rgb(155, 155, 155)" }} className="flex">
+              <img
+                style={{ width: "3rem", height: "100%" }}
+                src="/Capture-removebg-preview.png" alt=""></img>
+              <p style={{ paddingTop: 12, paddingRight: 10 }}>{info.hoTen}   </p>
+            </span> {" "}
+            <button className="btn-theme" onClick={handleLogout}
+              style={{ color: "rgb(155, 155, 155)", borderColor: "rgb(155, 155, 155)" }}
+            >Logout</button>
+          </div>
+
+
+        </>
+      )
+    }
+    return (
+      <>
+        <button
+          onClick={() => {
+            navigate("/login");
+          }}
+          className="btn-theme"
+          style={{ color: "rgb(155, 155, 155)", borderColor: "rgb(155, 155, 155)" }}
+        >
+          Login
+        </button>
+        <button
+          onClick={() => {
+            navigate("/register");
+          }}
+          className="btn-theme"
+          style={{ color: "rgb(155, 155, 155)", borderColor: "rgb(155, 155, 155)" }}
+        >
           Register
-          </button>
-  </>
-)
-   }
+        </button>
+      </>
+    )
+  }
   return (
     <div className=" shadow-lg ">
       <div className=" flex justify-between items-center  h-20">
-        <span 
-        className="text-3xl text-red-500 cursor-pointer flex"
-        onClick={() => {
-              navigate("/");
-            }}><p>CYBER</p><p className="text-black">FLIX</p></span>
+        <span
+          className="text-3xl text-red-500 cursor-pointer flex"
+          onClick={() => {
+            navigate("/");
+          }}><p>BOOKING</p><p className="text-black">MOVIE</p></span>
         <nav className="space-x-5">
           {renderUserNav()}
           {/* <button
