@@ -9,18 +9,18 @@
   display: flex;
   justify-content: center;
 }
+
 .rgtContainer {
   width: 600px;
   height: fit-content;
   z-index: 1000;
   position: relative;
   border-radius: 6px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(20, 50, 93, 0.9),
-    rgba(8, 22, 48, 0.9)
-  );
+  background-image: linear-gradient(to bottom,
+      rgba(20, 50, 93, 0.9),
+      rgba(8, 22, 48, 0.9));
 }
+
 .rgtContain {
   padding: 20px 32px 30px;
   color: white;
@@ -30,21 +30,23 @@
 .renderSeat {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-  /* background-color: #2196F3; */
   padding: 10px;
 }
+
 .renderSeatTablet {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto ;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
   /* background-color: #2196F3; */
   padding: 10px;
 }
+
 .renderSeatMobile {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto  ;
+  grid-template-columns: auto auto auto auto auto auto;
   /* background-color: #2196F3; */
   padding: 5px;
 }
+
 .inputContainer {
   display: block;
   position: relative;
@@ -57,6 +59,7 @@
   -ms-user-select: none;
   user-select: none;
 }
+
 .inputContainer input {
   position: relative;
   opacity: 0;
@@ -64,12 +67,15 @@
   height: 0;
   width: 0;
 }
+
 .checkMarkVipBG {
   background-color: orange;
 }
+
 .checkMarkBG {
   background-color: rgb(233, 233, 233);
 }
+
 .checkMark {
   position: absolute;
   top: 0;
@@ -80,18 +86,22 @@
   border-radius: 5px;
   text-align: center;
 }
-.inputContainer:hover input ~ .checkMark {
+
+.inputContainer:hover input~.checkMark {
   background-color: #ccc;
 }
-.inputContainer input:checked ~ .checkMark {
+
+.inputContainer input:checked~.checkMark {
   background-color: green;
   border-radius: 5px;
 }
+
 .checkMark:after {
   content: "";
   position: absolute;
   display: none;
 }
+
 .inputContainerTemp {
   display: block;
   position: relative;
@@ -104,6 +114,7 @@
   -ms-user-select: none;
   user-select: none;
 }
+
 .inputContainerTemp input {
   position: relative;
   opacity: 0;
@@ -122,6 +133,7 @@
   border-radius: 5px;
   text-align: center;
 }
+
 .checkMarkVip {
   position: absolute;
   top: 0;
@@ -132,8 +144,9 @@
   border-radius: 5px;
   text-align: center;
 }
+
 .detailBg {
-  background-color:#090d1c;
+  background-color: #090d1c;
 }
 
 .detailBGImg {
@@ -143,7 +156,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  
+
   position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
@@ -155,6 +168,7 @@
   height: 41vw;
   position: relative;
 }
+
 .detailContent {
   top: 50%;
   left: 50%;
@@ -168,6 +182,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .detailContentLeft {
   width: 25%;
   height: 100%;
@@ -176,22 +191,26 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .detailContentLeftMobile {
   width: 25%;
-  
+
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .detailContentMid {
   width: 59%;
   padding: 0px 15px;
 }
+
 .detailContentMidMobile {
   width: 59%;
- 
+
 }
+
 .detailContentRight {
   width: 16%;
   height: 100%;
@@ -204,51 +223,56 @@
 
 .tagMovie {
   color: #fff;
-    display: inline-block;
-    padding: 0 5px;
-    font-size: 16px;
-    min-width: 33px;
-    text-align: center;
-    margin-right: 6px;
-    border-radius: 4px;
-    vertical-align: 13%;
-    background-color: #fb4226;
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 16px;
+  min-width: 33px;
+  text-align: center;
+  margin-right: 6px;
+  border-radius: 4px;
+  vertical-align: 13%;
+  background-color: #fb4226;
 }
+
 .btnMuaVe {
   color: #fff;
-    border: none;
-    padding: 11px 25px;
-    font-size: 16px;
-    background: 0 0;
-    margin-top: 25px;
-    transition: all .2s;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    background-color: #fb4226;
+  border: none;
+  padding: 11px 25px;
+  font-size: 16px;
+  background: 0 0;
+  margin-top: 25px;
+  transition: all .2s;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  background-color: #fb4226;
 }
-.footerDesktop{
-  background-color:#222;
-  color:white;
-  padding:20px 0;
+
+.footerDesktop {
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
   font-size: 12px;
 
 }
-.footerMobile{
-  background-color:#222;
-  color:white;
-  padding:5px 0;
+
+.footerMobile {
+  background-color: #222;
+  color: white;
+  padding: 5px 0;
   font-size: 8px;
 
 }
-.footerTablet{
-  background-color:#222;
-  color:white;
-  padding:5px 0;
+
+.footerTablet {
+  background-color: #222;
+  color: white;
+  padding: 5px 0;
   font-size: 8px;
 }
+
 .partnerIcon {
   border-radius: 50%;
-  background-color:white;
+  background-color: white;
   width: 30px;
   height: 30px;
 }

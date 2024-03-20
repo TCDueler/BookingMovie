@@ -67,14 +67,6 @@ export default function HeaderDesktop() {
           }}><p>BOOKING</p><p className="text-black">MOVIE</p></span>
         <nav className="space-x-5">
           {renderUserNav()}
-          {/* <button
-            onClick={() => {
-              navigate("/login");
-            }}
-            className="btn-theme"
-          >
-            Login
-          </button> */}
         </nav>
       </div>
     </div>

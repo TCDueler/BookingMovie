@@ -8,35 +8,23 @@ import { useNavigate } from "react-router-dom";
 export default function BookingPageDesktop() {
   let SCHEDULE = JSON.parse(localStorage.getItem("SCHEDULE"));
   let navigate = useNavigate();
-  // const maLichChieu = useSelector((state) => state.userReducer.maLichChieu);
   const maLichChieu = SCHEDULE;
-  //let { id } = useParams();
   const [List, setList] = useState();
   const [chonGhe, setChonGhe] = useState([]);
   const [tongTien, setTongTien] = useState(0);
   const [dsVe, setDsVe] = useState([]);
-  const [number,setNumber] =useState(0);
+  const [number, setNumber] = useState(0);
   const [dataDatVe, setDataDatVe] = useState({
     maLichChieu: maLichChieu,
     danhSachVe: [
-      // {
-      //   maGhe: 0,
-      //   giaVe: 0,
-      // },
     ],
   });
-
   console.log("dsve", dsVe);
   console.log("datadatve", dataDatVe);
-
-  //console.log("chonghe", chonGhe);
-
-  //console.log("maLichChieu", maLichChieu);
   useEffect(() => {
     movieService
       .getSeatByShowTimeId(maLichChieu)
       .then((res) => {
-        //console.log("content ma lich chieu", res);
         setList(res.data.content);
       })
       .catch((err) => {
@@ -47,7 +35,6 @@ export default function BookingPageDesktop() {
     movieService
       .getSeatByShowTimeId(maLichChieu)
       .then((res) => {
-        //console.log("content ma lich chieu", res);
         setList(res.data.content);
       })
       .catch((err) => {
@@ -95,8 +82,6 @@ export default function BookingPageDesktop() {
                     { maGhe: item.maGhe, giaVe: item.giaVe },
                   ]);
                   setTongTien((tien) => tien + item.giaVe);
-                  // let newDataDatVe = { ...dataDatVe, danhSachVe: dsVe };
-                  // setDataDatVe(newDataDatVe);
                 } else if (e.target.checked == false) {
                   console.log("uncheck", item.tenGhe);
                   setChonGhe((chonGhe) =>
@@ -105,11 +90,7 @@ export default function BookingPageDesktop() {
                   const newDsVe = dsVe.filter((d) => d.maGhe !== item.maGhe);
                   setDsVe(newDsVe);
                   setTongTien((tien) => tien - item.giaVe);
-                  // let newDataDatVe = { ...dataDatVe, danhSachVe: dsVe };
-                  // setDataDatVe(newDataDatVe);
                 }
-
-                //console.log(item.tenGhe)
               }}
             />
             <span
@@ -173,7 +154,7 @@ export default function BookingPageDesktop() {
       .then((res) => {
         // console.log("dat thanh cong",res);
         toast.success("đặt thành công");
-        setNumber(number=>number+1)
+        setNumber(number => number + 1)
         navigate(`/booking/${SCHEDULE}`)
         //window.location.href = `/booking/${SCHEDULE}`;
       })

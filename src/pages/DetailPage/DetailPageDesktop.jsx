@@ -48,7 +48,6 @@ export default function DetailPageDesktop() {
       });
   }, []);
 
-  //render rap - lich chieu
   const [heThongRap, setHeThongRap] = useState([]);
   console.log("heThongrap", heThongRap);
   useEffect(() => {
@@ -96,7 +95,7 @@ export default function DetailPageDesktop() {
                               navigate(`/login`);
                             } else {
                               navigate(`/booking/${lich.maLichChieu}`);
-                             
+
                             }
                             console.log("lichchieu", id);
                           }}
@@ -138,7 +137,7 @@ export default function DetailPageDesktop() {
                 // itemSelectedColor:"#fb4226",
                 // itemActiveColor:"#fb4226",
                 // inkBarColor:"#fb4226",
-               
+
               },
             },
             token: {
@@ -166,18 +165,18 @@ export default function DetailPageDesktop() {
       key: "2",
       label: "THÔNG TIN",
       children: (
-        <div style={{ padding: "24px", color:"white"}}>
+        <div style={{ padding: "24px", color: "white" }}>
           <div className="flex" style={{ fontSize: "16px" }}>
-            <div style={{flex:"0 0 50%", maxWidth:"50%"}}>
+            <div style={{ flex: "0 0 50%", maxWidth: "50%" }}>
               <div className="flex">
-               <p style={{float:"left"}}>Ngày công chiếu:  </p> 
-               <p style={{float:"left"}}> {moment(rapCoChieu?.ngayKhoiChieu).format("DD/MM/YYYY")}</p>
-               
+                <p style={{ float: "left" }}>Ngày công chiếu:  </p>
+                <p style={{ float: "left" }}> {moment(rapCoChieu?.ngayKhoiChieu).format("DD/MM/YYYY")}</p>
+
               </div>
             </div>
-            <div style={{flex:"0 0 50%", maxWidth:"50%"}}>
-              <div className="flex"><p style={{float:"left"}}> Nội dung</p></div>
-              <div className="flex"><p style={{float:"left"}}> {rapCoChieu?.moTa}</p></div>
+            <div style={{ flex: "0 0 50%", maxWidth: "50%" }}>
+              <div className="flex"><p style={{ float: "left" }}> Nội dung</p></div>
+              <div className="flex"><p style={{ float: "left" }}> {rapCoChieu?.moTa}</p></div>
             </div>
           </div>
         </div>
@@ -222,32 +221,32 @@ export default function DetailPageDesktop() {
         </div>
       </div>
       <div className="detailFooter">
-      <ConfigProvider
-  theme={{
-    components: {
-      Tabs: {
-        /* here is your component tokens */
-        itemColor:"white",
-        itemSelectedColor:"#fb4226",
-        itemHoverColor:"#f36954",
-        inkBarColor:'#fb4226'
-      },
-    },
-  }}
->
-<Tabs
-          defaultActiveKey="1"
-          items={items}
-          onChange={onChange}
-          centered
-          style={{
-            padding: "20px 50px",
-            backgroundColor: "rgb(10 13 28)",
-            
+        <ConfigProvider
+          theme={{
+            components: {
+              Tabs: {
+                /* here is your component tokens */
+                itemColor: "white",
+                itemSelectedColor: "#fb4226",
+                itemHoverColor: "#f36954",
+                inkBarColor: '#fb4226'
+              },
+            },
           }}
-        />
-</ConfigProvider>
-       
+        >
+          <Tabs
+            defaultActiveKey="1"
+            items={items}
+            onChange={onChange}
+            centered
+            style={{
+              padding: "20px 50px",
+              backgroundColor: "rgb(10 13 28)",
+
+            }}
+          />
+        </ConfigProvider>
+
       </div>
     </div>
   );

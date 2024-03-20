@@ -11,7 +11,7 @@ export default function BookingPageTablet() {
   // const maLichChieu = useSelector((state) => state.userReducer.maLichChieu);
   const maLichChieu = SCHEDULE;
   //let { id } = useParams();
-  const [number,setNumber] =useState(0);
+  const [number, setNumber] = useState(0);
   const [List, setList] = useState();
   const [chonGhe, setChonGhe] = useState([]);
   const [tongTien, setTongTien] = useState(0);
@@ -29,10 +29,6 @@ export default function BookingPageTablet() {
 
   console.log("dsve", dsVe);
   console.log("datadatve", dataDatVe);
-
-  //console.log("chonghe", chonGhe);
-
-  //console.log("maLichChieu", maLichChieu);
   useEffect(() => {
     movieService
       .getSeatByShowTimeId(maLichChieu)
@@ -55,7 +51,7 @@ export default function BookingPageTablet() {
         console.log(err);
       });
   }, [number]);
- 
+
   useEffect(() => {
     let newDataDatVe = { ...dataDatVe, danhSachVe: dsVe };
     setDataDatVe(newDataDatVe);
@@ -175,12 +171,12 @@ export default function BookingPageTablet() {
       .then((res) => {
         console.log(res);
         toast.success("đặt thành công");
-        setNumber(number=>number+1)
+        setNumber(number => number + 1)
         navigate(`/booking/${SCHEDULE}`)
-       // window.location.href = `/booking/${SCHEDULE}`;
+        // window.location.href = `/booking/${SCHEDULE}`;
       })
       .catch((err) => {
-        console.log("err",err);
+        console.log("err", err);
         toast.error("đặt thất bại");
       });
   };

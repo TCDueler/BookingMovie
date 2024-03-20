@@ -16,33 +16,33 @@ export let movieService = {
   getDetail: (id) => {
     return https.get(`/api/QuanLyPhim/LayThongTinPhim?MaPhim=${id}`);
   },
-  getMovieByTheater:()=>{
-    return https.get(`/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maNhom=GP09` );
-  
+  getMovieByTheater: () => {
+    return https.get(`/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maNhom=GP09`);
+
   },
-  setBookingTicket:(payload)=>{
-    return https.post(`/api/QuanLyDatVe/DatVe`,payload)
+  setBookingTicket: (payload) => {
+    return https.post(`/api/QuanLyDatVe/DatVe`, payload)
   },
 
   getSeatByShowTimeId: (ShowTimeId) => {
     return https.get(`/api/QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=${ShowTimeId}`);
   },
-  getBroadcastScheduleByMovie:(movieId)=>{
+  getBroadcastScheduleByMovie: (movieId) => {
     return https.get(`/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${movieId}`)
   }
- 
+
 };
 export let adminService = {
-  getUserList:(query = ' ')=>{
+  getUserList: (query = ' ') => {
     return https.get(`/api/QuanLyNguoiDung/LayDanhSachNguoiDung${query}`);
   },
-  deleteUser: (taiKhoan = ' ')=>{
+  deleteUser: (taiKhoan = ' ') => {
     return https.delete(`/api/QuanLyNguoiDung/XoaNguoiDung?TaiKhoan=${taiKhoan}`)
   },
-  getUserDetailById:(taiKhoan)=>{
+  getUserDetailById: (taiKhoan) => {
     return https.post(`/api/QuanLyNguoiDung/LayThongTinNguoiDung?TaiKhoan=${taiKhoan}`)
   },
-  updateUser:(payload)=>{
-    return https.post(`/api/QuanLyNguoiDung/CapNhatThongTinNguoiDung`,payload)
+  updateUser: (payload) => {
+    return https.post(`/api/QuanLyNguoiDung/CapNhatThongTinNguoiDung`, payload)
   }
 }

@@ -17,7 +17,6 @@ export const loginAction = (formData, callback) => {
         localStorage.setItem("USER", JSON.stringify(res.data.content));
         //call back dùng navigate vì dùng window.location.href bị reload trang
         callback();
-        //window.location.href("/");
       })
       .catch((err) => {
         console.log(err);

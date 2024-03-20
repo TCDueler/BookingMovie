@@ -8,14 +8,13 @@ import { useNavigate } from "react-router-dom";
 export default function BookingPageMobile() {
   let SCHEDULE = JSON.parse(localStorage.getItem("SCHEDULE"));
   let navigate = useNavigate();
-  // const maLichChieu = useSelector((state) => state.userReducer.maLichChieu);
   const maLichChieu = SCHEDULE;
   //let { id } = useParams();
   const [List, setList] = useState();
   const [chonGhe, setChonGhe] = useState([]);
   const [tongTien, setTongTien] = useState(0);
   const [dsVe, setDsVe] = useState([]);
-  const [number,setNumber] =useState(0);
+  const [number, setNumber] = useState(0);
   const [dataDatVe, setDataDatVe] = useState({
     maLichChieu: maLichChieu,
     danhSachVe: [
@@ -28,10 +27,6 @@ export default function BookingPageMobile() {
 
   console.log("dsve", dsVe);
   console.log("datadatve", dataDatVe);
-
-  //console.log("chonghe", chonGhe);
-
-  //console.log("maLichChieu", maLichChieu);
   useEffect(() => {
     movieService
       .getSeatByShowTimeId(maLichChieu)
@@ -95,8 +90,6 @@ export default function BookingPageMobile() {
                     { maGhe: item.maGhe, giaVe: item.giaVe },
                   ]);
                   setTongTien((tien) => tien + item.giaVe);
-                  // let newDataDatVe = { ...dataDatVe, danhSachVe: dsVe };
-                  // setDataDatVe(newDataDatVe);
                 } else if (e.target.checked == false) {
                   console.log("uncheck", item.tenGhe);
                   setChonGhe((chonGhe) =>
@@ -173,7 +166,7 @@ export default function BookingPageMobile() {
       .then((res) => {
         console.log(res);
         toast.success("đặt thành công");
-        setNumber(number=>number+1)
+        setNumber(number => number + 1)
         navigate(`/booking/${SCHEDULE}`)
         //window.location.href = `/booking/${SCHEDULE}`;
       })
@@ -367,13 +360,13 @@ export default function BookingPageMobile() {
                   fontSize: "12px",
                   fontWeight: "500",
                   display: "flex",
-                  flexDirection:"column"
+                  flexDirection: "column"
                 }}
               >
                 <p style={{ color: "#108f3e" }}>
                   {List?.thongTinPhim.ngayChieu} -{" "}
                 </p>
-                
+
                 <p style={{ color: "red" }}> {List?.thongTinPhim.gioChieu}</p>{" "}
               </span>
             </div>

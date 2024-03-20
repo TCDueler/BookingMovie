@@ -17,35 +17,17 @@ export default function UserPage() {
   const [userDelete, setUserDelete] = useState();
 
   const [userDetail, setUserDetail] = useState();
-  // console.log("userdetail", userDetail);
-  // console.log(
-  //   "🚀 ~ file: UsersPage.jsx:11 ~ UsersPage ~ userDelete:",
-  //   userDelete
-  // );
 
-//try catch
-const getUser = async ()=>{
-try{
-  const res = await adminService.getUserList('?maNhom=GP00')
-  setUserArr(res.data.content)
-} catch(err){
-  console.log(err);
-}
-}
 
-// then catch
-  // const getUser = () => {
-  //   adminService
-  //     .getUserList("?maNhom=GP00")
-  //     .then((res) => {
-  //       console.log(res);
-  //       setUserArr(res.data.content);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
-
+  //try catch
+  const getUser = async () => {
+    try {
+      const res = await adminService.getUserList('?maNhom=GP00')
+      setUserArr(res.data.content)
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   useEffect(() => {
     // antd table 
@@ -92,7 +74,7 @@ try{
                     setIsOpenDrawer(true);
                   }
                 } catch (err) {
-                  console.log("err",err)
+                  console.log("err", err)
                 }
               }}
             >
@@ -126,7 +108,7 @@ try{
             await adminService.deleteUser(userDelete.taiKhoan);
             getUser();
             toast.success("xoá user thành công");
-           
+
           } catch (err) {
             // toast.error("xoá user thất bại")
             toast.error(err.response.data.content);
@@ -163,7 +145,7 @@ try{
               }
               console.log(values);
             }}
-          className="d-flex justify-content-center"
+            className="d-flex justify-content-center"
           >
             <Form.Item
               label="Họ và tên"

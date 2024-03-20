@@ -15,11 +15,11 @@ const LoginPage = () => {
       .login(values)
       .then((res) => {
         dispatch({
-          type:SET_INFO,
-          payload:res.data.content,
+          type: SET_INFO,
+          payload: res.data.content,
         })
         // luu len local storage
-        localStorage.setItem("USER",JSON.stringify(res.data.content))
+        localStorage.setItem("USER", JSON.stringify(res.data.content))
         toast.success("Đăng nhập thành công")
         navigate("/")
         console.log(res);
@@ -30,15 +30,13 @@ const LoginPage = () => {
       });
 
   };
-//redux thunk
+  //redux thunk
   const onFinishThunk = value => {
-   let onSuccess = ()=> window.location.href = "/";
+    let onSuccess = () => window.location.href = "/";
     // navigate("/")
-   dispatch(loginAction(value,onSuccess))
-    
+    dispatch(loginAction(value, onSuccess))
+
   }
-  //tool kit
-  // const onFinish =()=>{
 
   // }
   const onFinishFailed = (errorInfo) => {
@@ -46,10 +44,10 @@ const LoginPage = () => {
   };
   return (
     <div className="flex h-screen justify-center items-center register ">
-     
+
       <div className="w-1/2 p-10  rounded rgtContainer">
         <Form
-        
+
           layout="vertical"
           name="basic"
           labelCol={{
@@ -69,9 +67,9 @@ const LoginPage = () => {
           autoComplete="off"
         >
           <Form.Item
-          label={<label style={{ color: "white" }}>Tài khoản</label>}
+            label={<label style={{ color: "white" }}>Tài khoản</label>}
             name="taiKhoan"
- 
+
             rules={[
               {
                 required: true,
@@ -97,18 +95,18 @@ const LoginPage = () => {
 
           <Form.Item
             wrapperCol={{
-              
+
               span: 24,
             }}
           >
             <Button
               type="primary"
               htmlType="submit"
-             
+
               className=" hover:bg-white hover:text-orange-500"
-              style={{background:"#28a745"}}
+              style={{ background: "#28a745" }}
             >
-             Đăng nhập
+              Đăng nhập
             </Button>
           </Form.Item>
         </Form>

@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 export default function HeaderTablet() {
   let navigate = useNavigate();
-  //let info = useSelector((state)=> {return state.userReducer.info;})
   let { info } = useSelector(state => state.userReducer);
   console.log("🚀 ~ file: Header.jsx:9 ~ Header ~ info:", info)
   let handleLogout = () => {
@@ -67,14 +66,6 @@ export default function HeaderTablet() {
           }}><p>BOOKING</p><p className="text-black">MOVIE</p></span>
         <nav className="space-x-5">
           {renderUserNav()}
-          {/* <button
-            onClick={() => {
-              navigate("/login");
-            }}
-            className="btn-theme"
-          >
-            Login
-          </button> */}
         </nav>
       </div>
     </div>
